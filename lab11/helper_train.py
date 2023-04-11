@@ -15,7 +15,7 @@ def train_model(model, num_epochs, train_loader,
     for epoch in range(num_epochs):
 
         model.train()
-        for batch_idx, (features, targets) in enumerate(train_loader):
+        for batch_idx, (features, targets) in enumerate(train_loader,0):
 
             features = features.to(device)
             targets = targets.to(device)
